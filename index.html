@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/compare.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <title>Face recognition</title>
+  </head>
+  <body>
+    <div class="result">
+      <h3>Face Recognition</h3>
+      <div id="resultRate"></div>
+      <h4>Result:</h4>
+      <div id="result"></div>
+    </div>
+
+    <div class="box">
+      <div class="left">
+        <div class="imgWrapper">
+          <img id="firstImg" src="" alt="" />
+        </div>
+        <form id="imgUpload" enctype="multipart/form-data">
+          <input type="file" name="img" id="img01" onchange="showImg()" />
+        </form>
+      </div>
+
+      <div class="right">
+        <div class="imgWrapper">
+          <img id="secondImg" src="" alt="" />
+        </div>
+        <form id="imgCompare" enctype="multipart/form-data">
+          <input
+            type="file"
+            name="img"
+            id="img02"
+            onchange="showAnotherImg()"
+            multiple
+          />
+        </form>
+      </div>
+
+      <div class="compareBtnWraper container">
+        <input
+          type="button"
+          id="compareBtn"
+          value="Compare"
+          type="button"
+          class="btn btn-primary btn-lg btn-block"
+        />
+      </div>
+    </div>
+
+    <script src="./js/compare.js"></script>
+  </body>
+</html>
